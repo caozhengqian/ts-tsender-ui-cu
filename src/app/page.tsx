@@ -1,4 +1,4 @@
-import {ConnectButton} from "@rainbow-me/rainbowkit"
+"use client"
 import HomeContent from "@/components/HomeContent"
 import {useAccount} from  "wagmi"
 export default function Home() {
