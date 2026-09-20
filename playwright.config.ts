@@ -72,10 +72,19 @@ export default defineConfig({
   ],
 
   /* Run your local dev server before starting the tests */
-  webServer: {
-    command: 'npm run dev',
-    url: 'http://localhost:3000',
-    reuseExistingServer: true,
-    /* reuseExistingServer: !process.env.CI,*/
-  },
+  webServer: [
+    {
+      command: 'npm run dev',
+      url: 'http://localhost:3000',
+      reuseExistingServer: true,
+      /* reuseExistingServer: !process.env.CI,*/
+    },
+    {
+      // 启动本地 Anvil 节点，MetaMask 需要连接到它，避免卡在 Mainnet
+      command: 'npm run anvil',
+      url: 'http://127.0.0.1:8545',
+      reuseExistingServer: true,
+      timeout: 30000,
+    },
+  ],
 });

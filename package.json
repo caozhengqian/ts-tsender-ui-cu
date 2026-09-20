@@ -22,7 +22,7 @@
     "wagmi": "^2.19.5"
   },
   "devDependencies": {
-    "@playwright/test": "^1.63.0",
+    "@playwright/test": "1.48.2",
     "@synthetixio/synpress": "^4.0.10",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
